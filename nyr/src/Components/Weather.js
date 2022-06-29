@@ -86,17 +86,7 @@ export default function Weather() {
         }
     }
 
-
-    
-
-    
-
-
-
-
-
     useEffect(() => {
-        console.log("Home component mounted");
         dispatch(fetchOsloWeather())
         dispatch(fetchLillehammerWeather())
         dispatch(fetchHamarWeather())
