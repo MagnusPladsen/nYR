@@ -42,7 +42,7 @@ export default function Nav() {
                 <input type="text" placeholder="Søk..." onKeyDown={handleSearch} />
                 <img src={searchIcon} alt="search-icon" className="search-icon" onClick={handleSubmit} />
             </nav>
-            {search !== "" ? <SearchPage cityName={search} hideSearch={hideSearch} /> : null}
+            {/* {search !== "" ? <SearchPage cityName={search} hideSearch={hideSearch} /> : null} */}
         </div>
     );
 }

@@ -13,7 +13,7 @@ export default function SearchPage(props) {
 
     const hideSearch = props.hideSearch;
     const cityName = props.cityName
-    const temp = useSelector(selectTemp)
+    /* const temp = useSelector(selectTemp) */
     const weather = useSelector(selectWeather)
 
     const icon = () => {
@@ -40,7 +40,7 @@ export default function SearchPage(props) {
                     <h2>{cityName}</h2>
                     <div className="weather-container">
                         <img src={icon()} alt="weather-icon" className="weather-icon" />
-                        <p>{temp}°</p>
+                        <p>{14}°</p>
                 </div>
             </div>
             <div className="cta-container">

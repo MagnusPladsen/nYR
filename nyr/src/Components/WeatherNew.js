@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { 
-    fetchWeather
+    fetchWeather, weatherSlice
 } from "../features/weather";
 import { useState, useEffect } from "react";
 import { 
@@ -13,25 +13,30 @@ import snowIcon from "../Images/snow-icon.svg";
 import cloudsIcon from "../Images/clouds-icon.svg";
 import { store } from '../app/store';
 
+const icons = {
+    'Clear': sunIcon,
+    'Clouds': cloudsIcon,
+    'Rain': rainIcon,
+    'Snow': snowIcon
+}
 
 export default function WeatherNew(props) {
     const dispatch = useDispatch();
     const cityName = props.cityName;
+    const key = props.index;
    
-    const temp = useSelector(selectTemp); // GJØR AT ALLE HAR SAMME TEMP
-    const weather = useSelector(selectWeather); // GJØR AT ALLE HAR SAMME WEATHER
-    const icon = () => {
-        if (weather === 'Clear') {
-            return sunIcon;
-        } else if (weather === 'Clouds') {
-            return cloudsIcon;
-        } else if (weather === 'Rain') {
-            return rainIcon;
-        } else if (weather === 'Snow') {
-            return snowIcon;
+    const weather = useSelector((state) => selectWeather(state, cityName));
+
+    const handleTemp = () => {
+        if (typeof weather.temp === 'undefined') {
+            return '14';
+        }   else {
+            return weather.temp;
         }
     }
+    
 
+    console.log(weather)
     useEffect(() => {
         dispatch(fetchWeather(cityName)) 
     }
@@ -42,9 +47,9 @@ export default function WeatherNew(props) {
                 <div className="inner-container">
                     <h2>{cityName}</h2>
                     <div className="weather-container">
-                            <img src={icon()} alt="sun-icon" className="weather-icon" />
-                            <p>{temp}°</p>
-                    </div>
+                            <img src={icons[0]} alt="sun-icon" className="weather-icon" />
+                            <p>{handleTemp()}°</p> {/* PROBLEMET ER AT DEN SETTER TEMP OG ICONS FØR DET ER KLART I STATE */}
+                    </div>                         {/* SOM DA IGJEN STOPPER APP FRA RENDER, SOM GJØR AT STATE ALDRI BLIR KLAR */}
             </div>
         </div>
     )
