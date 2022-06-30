@@ -10,10 +10,10 @@ export default function Home() {
         <div className="home">
             <h1>Populære Steder</h1>
             <div className="outer-container">
-            {/* {defaultCities.map((cityName, index) => (
+            {defaultCities.map((cityName, index) => (
                     <WeatherNew key={index} cityName={cityName} />
-            ))} */}
-            <Weather />
+            ))}
+            {/* <Weather /> */}
             </div>
         </div>
     )
