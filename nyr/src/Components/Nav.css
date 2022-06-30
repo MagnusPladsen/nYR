@@ -10,11 +10,29 @@ nav {
 
 input {
     border: 1px solid #00A5D8;
-    height: 2em;
-    width: 60vw;
+    width: 70vw;
     border-radius: 5px;
+    font-size: 1em;
+    padding: 0.5rem;
 }
 
 .search-icon {
     width: 30px;
+    display: none;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .search-icon {
+        display: block;
+        position: relative;
+        right: 18%;
+    }
+    input {
+        width: 50vw;
+    }
+    .logo {
+        position: relative;
+        left: 15%;
+    }
 }

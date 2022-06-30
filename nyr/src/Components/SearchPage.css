@@ -1,0 +1,60 @@
+h1,h2 {font-family: 'Oswald', 'sans-serif';}
+
+p,text {font-family: 'Source Sans Pro', sans-serif;}
+
+.search-page {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.search-page h1 {
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: .5em;
+    padding: 0;
+}
+
+.search-page h2 {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: inline;
+    top: 1em;
+    margin-left: 2em;
+}
+
+.cta-back {
+    background-color: white;
+    color: black;
+    border: 0.5px solid rgb(63, 63, 63);
+    border-radius: 10px;
+    padding: 7px 15px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 2px 5px  rgb(200, 200, 200);
+}
+
+.cta-back:hover {
+    background-color: rgb(63, 63, 63);
+    background-color: #00A5D8;
+    color: white;
+}
+
+.cta-container {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media only screen and (min-width: 1000px) {
+   .search-page {
+        width: 70vw;
+   }
+   .search-page .inner-container {
+        left: 25%;
+   }
+}

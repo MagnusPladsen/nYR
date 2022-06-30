@@ -59,7 +59,7 @@ export const fetchWeather = createAsyncThunk('weather/getWeather', async (city) 
 export const weatherSlice = createSlice({
     name: 'weather',
     initialState: {
-        temp: NaN,
+        temp: 0,
         weather: 'Clear',
         isLoading: false,
         hasError: false,
