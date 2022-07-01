@@ -1,17 +1,19 @@
-import React from "react";
+import { useSelector } from "react-redux";
+import { selectCities } from "../features/userSlice";
 import './Home.css';
-import WeatherNew from "./WeatherNew";
-
+import Weather from "./Weather";
 
 export default function Home() {
-    const defaultCities = ['oslo', 'lillehammer', 'hamar', 'gjovik', 'trondheim'];
+
+    const userCities = useSelector((state) => selectCities(state));
+
     return (
         <div className="home">
-            <h1>Populære Steder</h1>
+            <h1>Mine Steder</h1>
             <div className="outer-container">
-            {defaultCities.map((cityName, index) => (
-                    <WeatherNew key={index} cityName={cityName} />
-            ))}
+                {userCities.map((cityName, index) => (
+                    <Weather key={index} cityName={cityName} />
+                ))}
             </div>
         </div>
     )

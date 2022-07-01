@@ -1,50 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { fetchWeather, selectTemp, selectWeather } from '../features/weather';
-import { useSelector, useDispatch } from 'react-redux';
-import sunIcon from "../Images/sun-icon.svg";
-import rainIcon from "../Images/rain-icon.svg";
-import snowIcon from "../Images/snow-icon.svg";
-import cloudsIcon from "../Images/clouds-icon.svg";
 import './SearchPage.css';
-import './Home.css'
+import Weather from './Weather';
+import { useDispatch } from "react-redux";
+import { setCities } from "../features/userSlice";
+
 
 export default function SearchPage(props) {
-    const dispatch = useDispatch();
 
     const hideSearch = props.hideSearch;
     const cityName = props.cityName
-    /* const temp = useSelector(selectTemp) */
-    const weather = useSelector(selectWeather)
+    const dispatch = useDispatch();
 
-    const icon = () => {
-        if (weather === 'Clear') {
-            return sunIcon;
-        } else if (weather === 'Clouds') {
-            return cloudsIcon;
-        } else if (weather === 'Rain') {
-            return rainIcon;
-        } else if (weather === 'Snow') {
-            return snowIcon;
-        }
+    const handleAddCity = (e) => {
+        e.preventDefault();
+        dispatch(setCities(cityName));
+        hideSearch();
+        
     }
-
-    useEffect(() => {
-        dispatch(fetchWeather(cityName))
-    }, [dispatch, cityName])
-
 
     return (
         <div className="search-page">
             <h1>Søkeresultat:</h1>
-            <div className="inner-container">
-                    <h2>{cityName}</h2>
-                    <div className="weather-container">
-                        <img src={icon()} alt="weather-icon" className="weather-icon" />
-                        <p>{14}°</p>
-                </div>
-            </div>
+            <Weather cityName={cityName} />
             <div className="cta-container">
-                <a href="#" className="cta-back" onClick={hideSearch}>Fjern søk</a>
+                <a href="#" className="cta cta-back" onClick={hideSearch}>Fjern</a>
+                <a href="#" className="cta cta-add" onClick={handleAddCity}>Legg til i favoritter</a>
             </div>
         </div>
     );

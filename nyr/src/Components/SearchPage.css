@@ -26,7 +26,7 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
     margin-left: 2em;
 }
 
-.cta-back {
+.cta {
     background-color: white;
     color: black;
     border: 0.5px solid rgb(63, 63, 63);
@@ -38,14 +38,19 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
     box-shadow: 0px 2px 5px  rgb(200, 200, 200);
 }
 
-.cta-back:hover {
+.cta-back {
+    margin-right: 0em;
+}
+
+.cta:hover {
     background-color: rgb(63, 63, 63);
     background-color: #00A5D8;
     color: white;
 }
 
 .cta-container {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
     padding-top: 1em;
     padding-bottom: 1em;
 }

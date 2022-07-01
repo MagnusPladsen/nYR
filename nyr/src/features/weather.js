@@ -39,10 +39,7 @@ export const weatherSlice = createSlice({
             state.city[cityName].hasError = false;
         },
         [fetchWeather.rejected]: (state, action) => {
-            state.temp = NaN;
-            state.weather = 'Clear';
-            state.isLoading = false;
-            state.hasError = true;
+            console.error("Error: ", action.error)
         },
         
     }
