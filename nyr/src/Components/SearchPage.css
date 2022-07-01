@@ -60,6 +60,14 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
         width: 70vw;
    }
    .search-page .inner-container {
-        left: 25%;
+        left: 15vw;
+   }
+   .cta-container {
+        display: flex;
+        justify-content: center;
+   }
+   .cta-back {
+        margin-right: 2em;
+        margin-left: -38vw;
    }
 }

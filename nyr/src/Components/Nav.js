@@ -15,6 +15,7 @@ export default function Nav() {
             input = capitalizeFirstLetter(input);
             setSearch(input);
             handleSubmit(e)
+            e.target.value = "";
         }
     }
 

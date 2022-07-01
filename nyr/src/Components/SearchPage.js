@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './SearchPage.css';
+import './Weather.css'
 import Weather from './Weather';
 import { useDispatch } from "react-redux";
 import { setCities } from "../features/userSlice";
