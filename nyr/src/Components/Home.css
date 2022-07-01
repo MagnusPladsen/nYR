@@ -4,7 +4,9 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
 
 .home {
     width: 90vw;
-    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .home h1 {
@@ -20,3 +22,4 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
         width: 70vw;
     }
 }
+

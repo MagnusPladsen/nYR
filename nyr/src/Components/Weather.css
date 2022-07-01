@@ -10,12 +10,13 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
     letter-spacing: 1px;
     display: inline;
     top: 1em;
-    margin-left: 2em;
+    margin-left: 1.5em;
 }
 
 
 .outer-container {
     display: grid;
+    width: 50vw;
 }
 
 .inner-container {
@@ -40,7 +41,7 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
 .weather-container {
     position: relative;
     display: flex;
-    margin-left: 10em;
+    margin-left: 9em;
     width: 20vw;
     top: -1.8em;
     right: -2em;
@@ -59,9 +60,26 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
     padding: 0;
 }
 
+.weather-container a {
+    position: relative;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 300;
+    color: black;
+    top: 0.3em;
+    margin-left: 1.5em;
+}
+
+
+
+
 @media only screen and (min-width: 1000px) {
     .inner-container {
-        width: 30vw;
+        width: 35vw;
+        margin-right: 1em;
+    }
+    .inner-container h2 {
+        margin-left: 1em;
     }
     .outer-container {
         grid-template-columns: 1fr 1fr;
@@ -69,12 +87,18 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
 }
 
 @media only screen and (min-width: 1300px) {
+    .inner-container {
+        margin-right: 1em;
+    }
     .weather-container {
         padding: 0 5em;
     }
 }
 
 @media only screen and (min-width: 1600px) {
+    .inner-container {
+        margin-right: 1em;
+    }
     .weather-container {
         padding: 0 10em;
     }

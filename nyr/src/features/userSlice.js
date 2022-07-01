@@ -9,8 +9,8 @@ export const userSlice = createSlice({
         setCities: (state, action) => {
             state.cities.push(action.payload);
         },
-        removeCity: (state, index) => {
-            state.cities.splice(index, 1);
+        removeCity: (state, action) => {
+            state.cities.splice(action.payload, 1);
         },
     },
 })

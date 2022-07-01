@@ -40,16 +40,14 @@ export default function Weather(props) {
     if(!weather) return null
 
     return (
-        <div className="outer-container">
-                <div className="inner-container">
+                <div className="inner-container" onClick={handleRemoveCity}>
                     <h2>{cityName}</h2>
                     <div className="weather-container">
                             <img src={icons[weather.weather]} alt="sun-icon" className="weather-icon" />
                             <p>{(weather.temp) ? weather.temp : 14}°</p>
-                            {/* <a href="#" onClick={handleRemoveCity}>x</a> */}
+                            <a href="#">x</a>
                     </div>                       
             </div>
-        </div>
     )
 }
 
