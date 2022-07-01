@@ -3,14 +3,11 @@ import logo from "../logo.svg";
 import searchIcon from "../Images/search-icon.svg";
 import "./Nav.css";
 import { useState } from "react";
-import { Redirect, useHistory } from "react-router-dom";
 import SearchPage from "./SearchPage";
-
 
 
 export default function Nav() {
     const [search, setSearch] = useState("");
-/*     const history = useHistory(); */
 
     const handleSearch = (e) => {
         let input = e.target.value;
@@ -31,8 +28,6 @@ export default function Nav() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        /* history.push("/search"); */
-        /* return <Redirect to="/search" /> */
     }
 
     return (
