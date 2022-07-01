@@ -17,13 +17,13 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
 .outer-container {
     display: grid;
     width: 50vw;
+    gap: 1em;
 }
 
 .inner-container {
     position: relative;
     border: 0.5px solid rgb(63, 63, 63);
     height: 80px;
-    margin-bottom: 1em;
     border-radius: 1em;
     width: 90vw;
     left: 50%;
@@ -76,7 +76,6 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
 @media only screen and (min-width: 1000px) {
     .inner-container {
         width: 35vw;
-        margin-right: 1em;
     }
     .inner-container h2 {
         margin-left: 1em;
@@ -87,18 +86,12 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
 }
 
 @media only screen and (min-width: 1300px) {
-    .inner-container {
-        margin-right: 1em;
-    }
     .weather-container {
         padding: 0 5em;
     }
 }
 
 @media only screen and (min-width: 1600px) {
-    .inner-container {
-        margin-right: 1em;
-    }
     .weather-container {
         padding: 0 10em;
     }

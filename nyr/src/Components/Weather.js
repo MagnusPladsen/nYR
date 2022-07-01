@@ -40,7 +40,7 @@ export default function Weather(props) {
     if(!weather) return null
 
     return (
-                <div className="inner-container" onClick={handleRemoveCity}>
+                <div className="inner-container" draggable="true" onClick={handleRemoveCity}>
                     <h2>{cityName}</h2>
                     <div className="weather-container">
                             <img src={icons[weather.weather]} alt="sun-icon" className="weather-icon" />

@@ -3,9 +3,11 @@ import { selectCities } from "../features/userSlice";
 import './Home.css';
 import Weather from "./Weather";
 
+
 export default function Home() {
 
     const userCities = useSelector((state) => selectCities(state));
+
 
     return (
         <div className="home">
