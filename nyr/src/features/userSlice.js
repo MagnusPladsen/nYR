@@ -7,10 +7,12 @@ export const userSlice = createSlice({
     },
     reducers: {
         setCities: (state, action) => {
-            state.cities.push(action.payload);
+            if(!state.cities.some(city => city === action.payload)) {
+                state.cities.push(action.payload);
+            }
         },
-        removeCity: (state, action) => {
-            state.cities.splice(action.payload, 1);
+        removeCity: (state, action) => { 
+            state.cities = state.cities.filter(city => city !== action.payload);
         },
     },
 })

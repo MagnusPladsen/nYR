@@ -27,9 +27,7 @@ export default function Weather(props) {
     const weather = useSelector((state) => selectWeather(state, cityName));
 
     const handleRemoveCity = (e) => {
-        const index = userCities.indexOf(cityName);
-        dispatch(removeCity(index));
-        console.log(index);
+        dispatch(removeCity(cityName));
     }
 
     useEffect(() => {
