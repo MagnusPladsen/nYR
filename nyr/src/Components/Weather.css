@@ -18,6 +18,7 @@ p,text {font-family: 'Source Sans Pro', sans-serif;}
     display: grid;
     width: 50vw;
     gap: 1em;
+    margin-bottom: 10em;
 }
 
 .inner-container {

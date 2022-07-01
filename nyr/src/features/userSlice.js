@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 export const userSlice = createSlice({
     name: 'weather',
     initialState: {
-        cities: ['Oslo', 'Lillehammer', 'Hamar', 'Gjøvik', 'Trondheim'],
+        cities: ['Oslo', 'Lillehammer', 'Hamar', 'Gjøvik', 'Trondheim',],
     },
     reducers: {
         setCities: (state, action) => {

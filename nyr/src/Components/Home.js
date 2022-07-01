@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { selectCities } from "../features/userSlice";
 import './Home.css';
 import Weather from "./Weather";
+import Footer from "./Footer";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
                     <Weather key={index} cityName={cityName} />
                 ))}
             </div>
+            <Footer/>
         </div>
     )
 }

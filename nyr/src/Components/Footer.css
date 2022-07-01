@@ -1,0 +1,22 @@
+h1,h2 {font-family: 'Oswald', 'sans-serif';}
+
+p,text {font-family: 'Source Sans Pro', sans-serif;}
+
+.footer {
+    position: relative;
+    bottom: 1em;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70vw;
+    text-align: center;
+    z-index: 2;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #00A5D8;
+}
